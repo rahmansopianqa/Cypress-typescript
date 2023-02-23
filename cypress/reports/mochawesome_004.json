@@ -1,0 +1,114 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2023-02-22T15:40:42.985Z",
+    "end": "2023-02-22T15:42:16.057Z",
+    "duration": 93072,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d9f56614-ca3f-4930-9afb-c2a61d277a2b",
+      "title": "",
+      "fullFile": "cypress/integration/checkout.ts",
+      "file": "cypress/integration/checkout.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "As a user I can checkout items in the item cart",
+          "fullTitle": "As a user I can checkout items in the item cart",
+          "timedOut": null,
+          "duration": 41093,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.login(URL, 'standard_user', 'secret_sauce');\nloginPage.assertLogin();\ndashboardPage.addSauceLabsBackpack();\ndashboardPage.clickShoppingChart();\nchartPage.sauceLabsBackpack();\nchartPage.clickCheckoutbtn();\ncheckoutInfoPage.personalInfo('Dadang', 'Konelo', '11111');\ncheckoutInfoPage.clickContinueBtn();\ncheckoutOverviewPage.assertOverview();\ncheckoutOverviewPage.clickFinishbtn();\ncheckoutCompletePage.assertionComplete();",
+          "err": {
+            "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: '#checkout' but never did.",
+            "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: '#checkout' but never did.\n    at ChartPage.clickCheckoutbtn (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\checkout.ts:161:12)\n    at Context.eval (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\checkout.ts:118:15)",
+            "diff": null
+          },
+          "uuid": "8b0dd3ec-e309-462e-8f8f-54c8b7986afe",
+          "parentUUID": "d9f56614-ca3f-4930-9afb-c2a61d277a2b",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "As a user I cannot checkout if I donnot completing to add my personal data",
+          "fullTitle": "As a user I cannot checkout if I donnot completing to add my personal data",
+          "timedOut": null,
+          "duration": 37276,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.login(URL, 'standard_user', 'secret_sauce');\nloginPage.assertLogin();\ndashboardPage.addSauceLabsBackpack();\ndashboardPage.clickShoppingChart();\nchartPage.sauceLabsBackpack();\nchartPage.clickCheckoutbtn();\ncheckoutInfoPage.clickContinueBtn;\ncheckoutInfoPage.AssertionError;",
+          "err": {
+            "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: '#checkout' but never did.",
+            "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: '#checkout' but never did.\n    at ChartPage.clickCheckoutbtn (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\checkout.ts:161:12)\n    at Context.eval (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\checkout.ts:131:15)",
+            "diff": null
+          },
+          "uuid": "504712a5-72cf-4a2f-a90f-abfefa0310dd",
+          "parentUUID": "d9f56614-ca3f-4930-9afb-c2a61d277a2b",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [],
+      "failures": [
+        "8b0dd3ec-e309-462e-8f8f-54c8b7986afe",
+        "504712a5-72cf-4a2f-a90f-abfefa0310dd"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 78369,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "chart": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-02-23T01:34:09.949Z",
+    "end": "2023-02-23T01:34:49.759Z",
+    "duration": 39810,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f1a7b7b1-e454-4f9e-97be-a440499d76c2",
+      "title": "",
+      "fullFile": "cypress/integration/checkout.ts",
+      "file": "cypress/integration/checkout.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "As a user I can checkout items",
+          "fullTitle": "As a user I can checkout items",
+          "timedOut": null,
+          "duration": 21553,
+          "state": "passed",
+          "speed": "slow",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.login(URL, 'standard_user', 'secret_sauce');\nloginPage.assertLogin();\ndashboardPage.addSauceLabsBackpack();\ndashboardPage.clickShoppingChart();\nchartPage.sauceLabsBackpack();\nchartPage.clickCheckoutbtn();\ncheckoutInfoPage.personalInfo('Dadang', 'Konelo', '11111');\ncheckoutInfoPage.clickContinueBtn();\ncheckoutOverviewPage.assertOverview();\ncheckoutOverviewPage.clickFinishbtn();\ncheckoutCompletePage.assertionComplete();",
+          "err": {},
+          "uuid": "1ce84fff-61d7-41e3-9a60-cfb504a61be9",
+          "parentUUID": "f1a7b7b1-e454-4f9e-97be-a440499d76c2",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "As a user I cannot checkout if I donnot completing to add my personal data",
+          "fullTitle": "As a user I cannot checkout if I donnot completing to add my personal data",
+          "timedOut": null,
+          "duration": 9709,
+          "state": "passed",
+          "speed": "medium",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.login(URL, 'standard_user', 'secret_sauce');\nloginPage.assertLogin();\ndashboardPage.addSauceLabsBackpack();\ndashboardPage.clickShoppingChart();\nchartPage.sauceLabsBackpack();\nchartPage.clickCheckoutbtn();\ncheckoutInfoPage.clickContinueBtn;\ncheckoutInfoPage.AssertionError;",
+          "err": {},
+          "uuid": "e62058eb-606a-4182-a8f6-f327dd7795f8",
+          "parentUUID": "f1a7b7b1-e454-4f9e-97be-a440499d76c2",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "1ce84fff-61d7-41e3-9a60-cfb504a61be9",
+        "e62058eb-606a-4182-a8f6-f327dd7795f8"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 31262,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "chart": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
