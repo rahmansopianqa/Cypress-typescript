@@ -19,7 +19,10 @@ it('As a user I can checkout items', () => {
     loginPage.assertLogin()
     dashboardPage.addSauceLabsBackpack()
     dashboardPage.clickShoppingChart()
+    dashboardPage.assertionCartBadge()
     chartPage.sauceLabsBackpack()
+    chartPage.assertionCartQuantity()
+    chartPage.assertionItemPrice()
     chartPage.clickCheckoutbtn()
     checkoutInfoPage.personalInfo('Dadang','Konelo','11111')
     checkoutInfoPage.clickContinueBtn()
@@ -32,9 +35,12 @@ it('As a user I cannot checkout if I donnot completing to add my personal data',
     loginPage.assertLogin()
     dashboardPage.addSauceLabsBackpack()
     dashboardPage.clickShoppingChart()
+    dashboardPage.assertionCartBadge()
     chartPage.sauceLabsBackpack()
+    chartPage.assertionCartQuantity()
+    chartPage.assertionItemPrice()
     chartPage.clickCheckoutbtn()
-    checkoutInfoPage.clickContinueBtn
-    checkoutInfoPage.AssertionError
+    checkoutInfoPage.clickContinueBtn()
+    checkoutInfoPage.AssertionError()
 
 })

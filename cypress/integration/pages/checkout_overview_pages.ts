@@ -13,9 +13,12 @@ export class CheckoutOverviewPage{
     
     assertOverview(){
         cy.get(this.summary_info).should('be.visible') 
-        cy.get(this.summary_subtotal).should('be.visible') 
-        cy.get(this.summary_tax).should('be.visible') 
-        cy.get(this.summary_total).should('be.visible') 
+        cy.get(this.summary_subtotal).should('be.visible')
+        cy.get(this.summary_subtotal).should('have.text','Item total: $29.99') 
+        cy.get(this.summary_tax).should('be.visible')
+        cy.get(this.summary_tax).should('have.text','Tax: $2.40')
+        cy.get(this.summary_total).should('be.visible')
+        cy.get(this.summary_total).should('have.text','Total: $32.39')
     }
     
     clickFinishbtn(){
